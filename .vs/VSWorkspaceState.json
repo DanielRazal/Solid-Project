@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Data",
+    "\\Data\\Migrations",
+    "\\Data\\Repositories",
+    "\\Data\\Repositories\\Repo",
+    "\\Solid Project",
+    "\\Solid Project\\Service",
+    "\\Solid Project\\Service\\Class",
+    "\\Solid Project\\Views",
+    "\\Solid Project\\Views\\Home"
+  ],
+  "SelectedNode": "\\Solid Project\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

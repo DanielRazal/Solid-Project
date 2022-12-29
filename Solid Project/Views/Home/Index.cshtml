@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Data.Models.Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+   
+        <label>Select a Category:</label>
+    <div class="btn-group">
+        <select asp-items="ViewBag.Category" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                onchange="location.href='/Home/Index/'+this.value">
+            <option value="0">All</option>
+        </select>
+        <div class="dropdown-menu">
+            <option value="0">All</option>
+        </div>
+    </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.PhotoUrl)</th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>Category</th>
+            <th>@Html.DisplayNameFor(model => model.Description)</th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var item in Model!)
+       {
+
+            <tr>
+                <td style="width:10%"><img src="~/images/@item.PhotoUrl" class="photo"></td>
+                <td>@item.Name</td>
+                <td>@item.Category.Name</td>
+                <td>@item.Description</td>
+            </tr>
+       }
+    </tbody>
+</table>
